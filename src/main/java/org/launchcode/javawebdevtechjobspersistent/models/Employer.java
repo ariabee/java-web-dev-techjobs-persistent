@@ -1,6 +1,7 @@
 package org.launchcode.javawebdevtechjobspersistent.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.List;
 public class Employer extends AbstractEntity {
 
     @NotNull
+    @NotBlank
     @Size(min=3, max=15)
     private String location;
 
